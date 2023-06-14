@@ -9,7 +9,7 @@ public class InGamePlayState : State<InGameStateID, InGameStateMachine>
     {
         ui.SetActive(false);
     }
-    public override void OnEntry()
+    public override void OnEntry()//updateの最初
     {
         ui.SetActive(true);
         Debug.Log($"Play:OnEntry");

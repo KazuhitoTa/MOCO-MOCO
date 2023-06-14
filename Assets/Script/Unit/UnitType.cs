@@ -11,5 +11,4 @@ public enum UnitType
     Lv3,
     Lv4,
     Lv5,
-    Core,
 }
