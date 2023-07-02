@@ -1,0 +1,1333 @@
+fileFormatVersion: 2
+guid: 4a7d4fc69e47a574a855a78c00742f62
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: L5_wait_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1314
+        width: 123
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9023eb67bd5d65c489c712d33a53ac56
+      internalID: 1968164309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1314
+        width: 123
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414ebaab0cce009438508cab12f293e1
+      internalID: -113820502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_2
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1314
+        width: 123
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615cd536f3548624bb4acb6978e46c6d
+      internalID: -75258087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_3
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1314
+        width: 123
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40569fb17c092264e95fec7f16318ecc
+      internalID: -324846508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_4
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1314
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e82f150c1106d40a6a5d480f79a516
+      internalID: 96200889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_5
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1314
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06181e871ccca2a43a61bf7a6553cf14
+      internalID: 471911264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_6
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1314
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca79318df9f9624ab4bf0850ba08836
+      internalID: 1603073784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_7
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1127
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddc6eb65d67d8944a8def836965f9f2
+      internalID: 2035220294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_8
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1127
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0911bd6f156a55943a475e5a4e535e84
+      internalID: -1576896590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_9
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1127
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248aab3f48defce4c940825d4dfd9852
+      internalID: -2031530298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_10
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 1127
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fd48d38eb9bd8499a76a30888c8c59
+      internalID: 405541796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_11
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 1127
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78859a82cefba640b5214bec42ccf98
+      internalID: 560581785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_12
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1127
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a532ab67dadfdb4ea972e527c861f1c
+      internalID: 354847270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_13
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1127
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6aae7ace90abb4eaf8c63babcf6019
+      internalID: 1659507351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_14
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 940
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fcb481d201840041ad16dde16c111c6
+      internalID: 119646262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_15
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 940
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21dc60fc9f52a0843996e3f3390814c0
+      internalID: 2074814471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_16
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 940
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46fd0aa93ad67f4993c93298c7e6f57
+      internalID: 1682406288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_17
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 940
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bfdb51b6309a84093a9e0b6a1f0056
+      internalID: 1292146015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_18
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 940
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a39c88b9c9517c45b769e576ca92174
+      internalID: -1691780747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_19
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 940
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f4156d7e93ffd4aa74c855b850fd43
+      internalID: 2061384343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_20
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 940
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf42b0b4877aee44b2a94851560b4cd
+      internalID: 1344127033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_21
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 753
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108c295c46d5e5a4c9f31395c05f0ad5
+      internalID: -1326123847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_22
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 753
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ded32fc822863a48a77697c55022bac
+      internalID: 1092995089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_23
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 753
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0534fb1c1e4d844c95c969b90c6c4a2
+      internalID: -865437430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_24
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 753
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aae6654293c651418faea00254553c9
+      internalID: -1172873256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_25
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 753
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a90c9bda74c05f4e8898be18b7500f7
+      internalID: 294881088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_26
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 753
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47c8b8786d96174c9bd07ed156b24d0
+      internalID: -1347532279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_27
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 753
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee168f1ce6e284340ad46c7779f4e543
+      internalID: 923228111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_28
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 566
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4dc7bcb2b6ed1641891aebd2866f22c
+      internalID: -450535420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_29
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 566
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4aea755a87747419f250dd8486cf27
+      internalID: -1643845263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_30
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 566
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d57cd165cac214e816cb6a240fe66e
+      internalID: 397257379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_31
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 566
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d34ebbd3022df54ba1975018d9087b5
+      internalID: -582291662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_32
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 566
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7250237c1fd83c14990bca8e64e475b9
+      internalID: -1687166951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_33
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 566
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86de142420f05949b7c1629f351d8e9
+      internalID: -1313028216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_34
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 566
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033399f4f166cdc4196792af198c8d46
+      internalID: -1718609509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_35
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 379
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e10babae45bb2f48be70cb1e62c61d6
+      internalID: -1385975550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_36
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 379
+        width: 119
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa91fa29b61920d4d9fb070b586a6dd2
+      internalID: -7724172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_37
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 379
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9df762b5bd792b429bcfd5a562015aa
+      internalID: 778924622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_38
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 379
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2004f7b996fa13947bf4b15aa4fdea0e
+      internalID: 1900451626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_39
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 379
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefef1359672a3a438ab39dd72cf873f
+      internalID: -430429078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_40
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 379
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51508c78b2f0dc1449e488e32ced741a
+      internalID: 428384876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_41
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 379
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af51148d53890804886a1a62064b470a
+      internalID: 383394391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_42
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 192
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ac3bd494d3bda41bf3302fa4200f77
+      internalID: -1143855945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_43
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 192
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f11c2471cca1b74c8fa0878b36ad392
+      internalID: -1285113266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_44
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 192
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1068fabe96dc5142b02d89a593fe35e
+      internalID: -1647141737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_45
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 192
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a801c4a7787c64a43a4fec0a096c71c4
+      internalID: 1135978474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_46
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 192
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb4b96ec1f68c145b20e6ab1e1a8b93
+      internalID: 1136941705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_47
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 192
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8110acc7366085d47afc3f36f06d6a9d
+      internalID: -601664169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_48
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 192
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d86fbbaa1338b44b92ef4f42c96a2e3
+      internalID: 1059724716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_49
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 5
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f2df72992a99d43a87cc020486590e
+      internalID: 1532481119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_50
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 5
+        width: 121
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ca6c81f4b2c6c429e2dee2dffa4fe4
+      internalID: 1666165790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_51
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 5
+        width: 123
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3c74923bac4a841a199a29ce1f8988
+      internalID: -627673020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_52
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 5
+        width: 123
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af316a9c219d7654eb502bb528f34ded
+      internalID: -1987389308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_53
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 5
+        width: 123
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18854d94f9a983744bf5a597e6f39509
+      internalID: 2014754856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L5_wait_54
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 5
+        width: 123
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541400078dd49ad44b9af625a727a24e
+      internalID: 1381032327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6ed1a072e8567ca4e884828298a085be
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      L5_wait_0: 1968164309
+      L5_wait_1: -113820502
+      L5_wait_10: 405541796
+      L5_wait_11: 560581785
+      L5_wait_12: 354847270
+      L5_wait_13: 1659507351
+      L5_wait_14: 119646262
+      L5_wait_15: 2074814471
+      L5_wait_16: 1682406288
+      L5_wait_17: 1292146015
+      L5_wait_18: -1691780747
+      L5_wait_19: 2061384343
+      L5_wait_2: -75258087
+      L5_wait_20: 1344127033
+      L5_wait_21: -1326123847
+      L5_wait_22: 1092995089
+      L5_wait_23: -865437430
+      L5_wait_24: -1172873256
+      L5_wait_25: 294881088
+      L5_wait_26: -1347532279
+      L5_wait_27: 923228111
+      L5_wait_28: -450535420
+      L5_wait_29: -1643845263
+      L5_wait_3: -324846508
+      L5_wait_30: 397257379
+      L5_wait_31: -582291662
+      L5_wait_32: -1687166951
+      L5_wait_33: -1313028216
+      L5_wait_34: -1718609509
+      L5_wait_35: -1385975550
+      L5_wait_36: -7724172
+      L5_wait_37: 778924622
+      L5_wait_38: 1900451626
+      L5_wait_39: -430429078
+      L5_wait_4: 96200889
+      L5_wait_40: 428384876
+      L5_wait_41: 383394391
+      L5_wait_42: -1143855945
+      L5_wait_43: -1285113266
+      L5_wait_44: -1647141737
+      L5_wait_45: 1135978474
+      L5_wait_46: 1136941705
+      L5_wait_47: -601664169
+      L5_wait_48: 1059724716
+      L5_wait_49: 1532481119
+      L5_wait_5: 471911264
+      L5_wait_50: 1666165790
+      L5_wait_51: -627673020
+      L5_wait_52: -1987389308
+      L5_wait_53: 2014754856
+      L5_wait_54: 1381032327
+      L5_wait_6: 1603073784
+      L5_wait_7: 2035220294
+      L5_wait_8: -1576896590
+      L5_wait_9: -2031530298
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4abc80884f29a5c4381ab2fae884e716, type: 3}
+  m_Name: YellowUnitStatusSO
+  m_EditorClassIdentifier: 
+  yellowUnitStatuses:
+  - unitModel: {fileID: 4186022448700795664, guid: 7bdcc4c58ee71a241b88037ef4eeefc6, type: 3}
+    bulletModel: {fileID: 0}
+    unitName: "\u304D\u3044\u308D\uFF11"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
+    numbnessTime: 0
+    numbnessInterval: 0
+    numbnessCount: 0
+  - unitModel: {fileID: 3949257904513895400, guid: 286a5feed67df454589b6a512bb9c138, type: 3}
+    bulletModel: {fileID: 0}
+    unitName: "\u304D\u3044\u308D\uFF12"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
+    numbnessTime: 0
+    numbnessInterval: 0
+    numbnessCount: 0
+  - unitModel: {fileID: 6071303688339746827, guid: 7939fe8b6ef5dc9499ad5097046eb7c2, type: 3}
+    bulletModel: {fileID: 0}
+    unitName: "\u304D\u3044\u308D\uFF13"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
+    numbnessTime: 0
+    numbnessInterval: 0
+    numbnessCount: 0
+  - unitModel: {fileID: 3321598700421301017, guid: e0d2a7b27104cf647bba911ee0aab07a, type: 3}
+    bulletModel: {fileID: 0}
+    unitName: "\u304D\u3044\u308D\uFF14"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
+    numbnessTime: 0
+    numbnessInterval: 0
+    numbnessCount: 0
+  - unitModel: {fileID: 6072272206960216190, guid: bc53d0bf58fcdaf4eb432afac5a195c9, type: 3}
+    bulletModel: {fileID: 0}
+    unitName: "\u304D\u3044\u308D\uFF15"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
+    numbnessTime: 0
+    numbnessInterval: 0
+    numbnessCount: 0

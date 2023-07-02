@@ -6,6 +6,7 @@ using UnityEngine;
 [Serializable]
 public enum UnitType
 {
+    none,
     Lv1,
     Lv2,
     Lv3,

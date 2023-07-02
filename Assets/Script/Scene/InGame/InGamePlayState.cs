@@ -5,9 +5,20 @@ using UnityEngine;
 public class InGamePlayState : State<InGameStateID, InGameStateMachine>
 {
     [SerializeField] private GameObject ui;
+
+    [SerializeField] MapManager _mapManager=null;
+    
+    [SerializeField]UnitManager _unitManager=null;
+    [SerializeField]BulletManager _bulletManager=null;
+    [SerializeField]CameraController cameraController=null;
+    
     void Start()
     {
+        _unitManager.UnitAwake();
+        _bulletManager.BulletAwake();
         ui.SetActive(false);
+        _mapManager.Init();
+        cameraController._Start();
     }
     public override void OnEntry()//updateの最初
     {
@@ -16,13 +27,16 @@ public class InGamePlayState : State<InGameStateID, InGameStateMachine>
     }
     public override void OnUpdate()
     {
-        Debug.Log($"Play:OnUpdate");
+        _mapManager.ManagedUpdate();
+        _unitManager.ManagedUpdate();
+        _bulletManager.BulletUpdate();
+        cameraController._Update();
         if (Input.GetKeyDown(KeyCode.Space))
         {
             stateMachine.SetMoveFlag(InGameStateID.Pose);
             Debug.Log($"Down Space Key" + new string('+', 15));
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             stateMachine.SetMoveFlag(InGameStateID.Exitpop, true);
             Debug.Log($"Down A Key" + new string('+', 15));
