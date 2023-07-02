@@ -8,11 +8,7 @@ using TD;
 
 public class MapManager : MonoBehaviour
 {
-    //いるステータス
-    //・unitを識別できる物
-    //・選ばれたunitにあったボタン用の画像
-    private string[] choisesUnitNames;
-    private List<List<(string,UnitType)>> tileStates = new List<List<(string,UnitType)>>();//床の状態を管理
+    private List<List<(UnitName,UnitType)>> tileStates = new List<List<(UnitName,UnitType)>>();//床の状態を管理
     private bool canUnitPut;//置けるかどうかの確認用
     private List<List<GameObject>> mapTile = new List<List<GameObject>>();//マップに置かれている床を管理
     private List<List<int>> mapDate = new List<List<int>>();//床がない場所には999キャラが何も置かれていない場所には0キャラが置かれている場合はその識別番号を入れる
@@ -32,6 +28,10 @@ public class MapManager : MonoBehaviour
     [SerializeField]CreateMap createMapTest; 
     [SerializeField]GameObject tstObj;
     [SerializeField]int stageNumber=0; 
+    [SerializeField]Sprite[] images1;
+    [SerializeField]Sprite[] images2;
+    [SerializeField]Image button1;
+    [SerializeField]Image button2;
     
     /// <summary>
     /// Start
@@ -55,8 +55,7 @@ public class MapManager : MonoBehaviour
 
     void UnitChoice()
     {
-        choisesUnitNames[0]="Green";
-        choisesUnitNames[0]="Yellow";
+    
     }
 
     void MapCreateTest()
@@ -74,7 +73,7 @@ public class MapManager : MonoBehaviour
             mapDate.Add(new List<int>());
             mapTile.Add(new List<GameObject>());
             mapObjPosTest.Add(new List<Vector3>());
-            tileStates.Add(new List<(string, UnitType)>());
+            tileStates.Add(new List<(UnitName, UnitType)>());
             
 
             for (int j = 0; j < y; j++) // 列数
@@ -82,7 +81,7 @@ public class MapManager : MonoBehaviour
                 mapTile[i].Add(null);
                 mapDate[i].Add(0); 
                 mapObjPosTest[i].Add(new Vector3(0,0,0));
-                tileStates[i].Add(("",UnitType.none)); 
+                tileStates[i].Add((UnitName.none,UnitType.none)); 
             }
         }
     
@@ -99,11 +98,11 @@ public class MapManager : MonoBehaviour
                 if(tempNumber==0)
                 {
                     mapTile[a][b]=Instantiate(tstObj,tempObjPosTest,Quaternion.identity);
-                    tileStates[a][b]=("",UnitType.none);   
+                    tileStates[a][b]=(UnitName.none,UnitType.none);   
                 }
                 else
                 {
-                    tileStates[a][b]=("x",UnitType.none);
+                    tileStates[a][b]=(UnitName.none,UnitType.none);
                 }
                 
 
@@ -119,13 +118,13 @@ public class MapManager : MonoBehaviour
     /// </summary>
     void UnitInit()
     {
-        unitNumber =4;//Random.Range(4,7); 
+        unitNumber =6;//Random.Range(4,7); 
         nextUnitList2.Insert(0, unitNumber - 1);
-        //NextCharacter();
+        NextCharacter();
     
         unitNumber = 1;//Random.Range(1,4);
         nextUnitList.Insert(0, unitNumber - 1);
-        //NextCharacter();
+        NextCharacter();
     }
     
     /// <summary>
@@ -158,21 +157,21 @@ public class MapManager : MonoBehaviour
                     {
                         temp=unitManager.CreateUnit(unitNumber-1,clickObj.transform.position).gameObject;
                         temp.transform.parent=clickObj.gameObject.transform;
-                        unitNumber=1;//Random.Range(1,4);
+                        unitNumber=Random.Range(1,6);
                         nextUnitList.Insert(0,unitNumber-1);
                     }
                     else
                     {
                         temp=unitManager.CreateUnit(unitNumber-1,clickObj.transform.position).gameObject;
                         temp.transform.parent=clickObj.gameObject.transform;
-                        unitNumber=4;//Random.Range(4,7);
+                        unitNumber=Random.Range(6,8);
                         nextUnitList2.Insert(0,unitNumber-1);
                     } 
                     
                     canUnitPut=false;
                     nowUnitCost--;
                 }
-                //NextCharacter();
+                NextCharacter();
             }
             
         }
@@ -198,7 +197,7 @@ public class MapManager : MonoBehaviour
                 };
                 if(unitNumber<4)nextUnitList.Insert(0,unitNumber-1);
                 else nextUnitList2.Insert(0,unitNumber-1);
-                //NextCharacter();
+                NextCharacter();
                 unitManager.RemoveUnit(tep);
                 if(nowUnitCost<maxUnitCost)nowUnitCost++;
                 syringeCheck=false;
@@ -212,17 +211,18 @@ public class MapManager : MonoBehaviour
     /// 次のunitを表示
     /// </summary>
 
-    // void NextCharacter()
-    // {
-    //     if (unitNumber >= 1 && unitNumber <= 3)
-    //     {
-    //         unitImg[0].color = unitColor[unitNumber - 1];
-    //     }
-    //     else if (unitNumber >= 4 && unitNumber <= 6)
-    //     {
-    //         unitImg[1].color = unitColor[unitNumber - 4];
-    //     }
-    // }
+    void NextCharacter()
+    {
+        if (unitNumber >= 1 && unitNumber <= 5)
+        {
+            button1.sprite=images1[unitNumber-1];
+        }
+        else if (unitNumber >= 6 && unitNumber <= 10)
+        {
+            button1.sprite=images1[unitNumber-6];
+        }
+
+    }
 
     /// <summary>
     /// クリックしたオブジェクトをclickedGameObjectに入れる

@@ -11,14 +11,20 @@ public class InGamePlayState : State<InGameStateID, InGameStateMachine>
     [SerializeField]UnitManager _unitManager=null;
     [SerializeField]BulletManager _bulletManager=null;
     [SerializeField]CameraController cameraController=null;
+    [SerializeField]EnemyManager _enemyManager=null;
+    [SerializeField]Tower _fieldTower=null;
     
     void Start()
     {
         _unitManager.UnitAwake();
+        _enemyManager.EnemyAwake();
         _bulletManager.BulletAwake();
         ui.SetActive(false);
+        _enemyManager.Init();
         _mapManager.Init();
         cameraController._Start();
+        _fieldTower.Init();
+        
     }
     public override void OnEntry()//updateの最初
     {
@@ -29,8 +35,10 @@ public class InGamePlayState : State<InGameStateID, InGameStateMachine>
     {
         _mapManager.ManagedUpdate();
         _unitManager.ManagedUpdate();
+        _enemyManager.ManagedUpdate();
         _bulletManager.BulletUpdate();
         cameraController._Update();
+        _fieldTower.ManagedUpdate();
         if (Input.GetKeyDown(KeyCode.Space))
         {
             stateMachine.SetMoveFlag(InGameStateID.Pose);

@@ -47,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tower
+    uniqueID: 1504697643
+    locked: 0
   - name: Player
     uniqueID: 4087390371
     locked: 0

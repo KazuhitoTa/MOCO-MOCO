@@ -39,6 +39,9 @@ public class EnemyMethod : MonoBehaviour
 	// Updateの呼び出しを制御する
 	public void ManagedUpdate()
 	{
+        var pos=gameObject.transform.position;
+        pos.z=pos.y/1000f;
+        gameObject.transform.position=new Vector3(pos.x,pos.y,pos.z);
         if(!test)
         {
             target = GameObject.FindWithTag("Tower").transform;

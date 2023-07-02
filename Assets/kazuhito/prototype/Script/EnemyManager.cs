@@ -90,7 +90,7 @@ public class EnemyManager : MonoBehaviour
 		{
 			enemy.ManagedUpdate();
 		}
-		if(_enemies.Count==0&&check)text.text="GameClear";
+		//if(_enemies.Count==0&&check)text.text="GameClear";
 	}
 
 }

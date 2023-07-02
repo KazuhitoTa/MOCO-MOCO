@@ -11,11 +11,10 @@ public class Tower : MonoBehaviour
     [SerializeField]private GameObject hpBar;
     [SerializeField]private Transform barPos;
     private Image hpBarImage;
-    [SerializeField]TextMeshProUGUI gameOver;
+    
 
 	public void Init()
 	{
-        gameOver.text="";
         Hp=100;
         CreateHealthBar();
 	}
@@ -47,7 +46,7 @@ public class Tower : MonoBehaviour
         if(currentHP<=0)
         {
             currentHP=0;
-            gameOver.text="GameOver";
+            //gameOver.text="GameOver";
         }
     }
 
