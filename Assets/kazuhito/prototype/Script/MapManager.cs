@@ -8,7 +8,7 @@ using TD;
 
 public class MapManager : MonoBehaviour
 {
-    private List<List<(UnitName,UnitType)>> tileStates = new List<List<(UnitName,UnitType)>>();//床の状態を管理
+    //private List<List<(UnitName,UnitType)>> tileStates = new List<List<(UnitName,UnitType)>>();//床の状態を管理
     private bool canUnitPut;//置けるかどうかの確認用
     private List<List<GameObject>> mapTile = new List<List<GameObject>>();//マップに置かれている床を管理
     private List<List<int>> mapDate = new List<List<int>>();//床がない場所には999キャラが何も置かれていない場所には0キャラが置かれている場合はその識別番号を入れる
@@ -27,7 +27,9 @@ public class MapManager : MonoBehaviour
     //テスト
     [SerializeField]CreateMap createMapTest; 
     [SerializeField]GameObject tstObj;
-    [SerializeField]int stageNumber=0; 
+    [SerializeField]int stageNumber=0;
+    [SerializeField]GreenUnitStatusSO greenUnitStatusSO;
+    [SerializeField]YellowUnitStatusSO yellowUnitStatusSO; 
     [SerializeField]Sprite[] images1;
     [SerializeField]Sprite[] images2;
     [SerializeField]Image button1;
@@ -53,9 +55,16 @@ public class MapManager : MonoBehaviour
         UnitPut();
     }
 
-    void UnitChoice()
+    void UnitImgChoice()
     {
-    
+        for(int i=0;i<greenUnitStatusSO.greenUnitStatuses.Count;i++)
+        {
+            images1[i]=greenUnitStatusSO.greenUnitStatuses[i].ButtonImage;
+        }
+        for(int i=0;i<yellowUnitStatusSO.yellowUnitStatuses.Count;i++)
+        {
+            images1[i]=yellowUnitStatusSO.yellowUnitStatuses[i].BottonImg;
+        }
     }
 
     void MapCreateTest()
@@ -73,7 +82,7 @@ public class MapManager : MonoBehaviour
             mapDate.Add(new List<int>());
             mapTile.Add(new List<GameObject>());
             mapObjPosTest.Add(new List<Vector3>());
-            tileStates.Add(new List<(UnitName, UnitType)>());
+            //tileStates.Add(new List<(UnitName, UnitType)>());
             
 
             for (int j = 0; j < y; j++) // 列数
@@ -81,7 +90,7 @@ public class MapManager : MonoBehaviour
                 mapTile[i].Add(null);
                 mapDate[i].Add(0); 
                 mapObjPosTest[i].Add(new Vector3(0,0,0));
-                tileStates[i].Add((UnitName.none,UnitType.none)); 
+                //tileStates[i].Add((UnitName.none,UnitType.none)); 
             }
         }
     
@@ -98,11 +107,11 @@ public class MapManager : MonoBehaviour
                 if(tempNumber==0)
                 {
                     mapTile[a][b]=Instantiate(tstObj,tempObjPosTest,Quaternion.identity);
-                    tileStates[a][b]=(UnitName.none,UnitType.none);   
+                    //tileStates[a][b]=(UnitName.none,UnitType.none);   
                 }
                 else
                 {
-                    tileStates[a][b]=(UnitName.none,UnitType.none);
+                    //tileStates[a][b]=(UnitName.none,UnitType.none);
                 }
                 
 
@@ -122,7 +131,7 @@ public class MapManager : MonoBehaviour
         nextUnitList2.Insert(0, unitNumber - 1);
         NextCharacter();
     
-        unitNumber = 1;//Random.Range(1,4);
+        unitNumber = 5;//Random.Range(1,4);
         nextUnitList.Insert(0, unitNumber - 1);
         NextCharacter();
     }
@@ -157,14 +166,14 @@ public class MapManager : MonoBehaviour
                     {
                         temp=unitManager.CreateUnit(unitNumber-1,clickObj.transform.position).gameObject;
                         temp.transform.parent=clickObj.gameObject.transform;
-                        unitNumber=Random.Range(1,6);
+                        unitNumber=3;
                         nextUnitList.Insert(0,unitNumber-1);
                     }
                     else
                     {
                         temp=unitManager.CreateUnit(unitNumber-1,clickObj.transform.position).gameObject;
                         temp.transform.parent=clickObj.gameObject.transform;
-                        unitNumber=Random.Range(6,8);
+                        unitNumber=Random.Range(6,10);
                         nextUnitList2.Insert(0,unitNumber-1);
                     } 
                     
@@ -195,7 +204,7 @@ public class MapManager : MonoBehaviour
                         }
                     }
                 };
-                if(unitNumber<4)nextUnitList.Insert(0,unitNumber-1);
+                if(unitNumber<6)nextUnitList.Insert(0,unitNumber-1);
                 else nextUnitList2.Insert(0,unitNumber-1);
                 NextCharacter();
                 unitManager.RemoveUnit(tep);
@@ -219,7 +228,7 @@ public class MapManager : MonoBehaviour
         }
         else if (unitNumber >= 6 && unitNumber <= 10)
         {
-            button1.sprite=images1[unitNumber-6];
+            button2.sprite=images2[unitNumber-6];
         }
 
     }

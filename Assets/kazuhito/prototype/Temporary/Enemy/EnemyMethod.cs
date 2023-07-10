@@ -81,9 +81,17 @@ public class EnemyMethod : MonoBehaviour
         if(currentHP<=0)
         {
             currentHP=0;
-
+            
             EnemyManager.Instance.RemoveEnemy(this);
         }
+    }
+    public bool DeathCheck()
+    {
+        if(currentHP<=0)
+        {
+            return true;
+        }
+        return false;
     }
 
     private IEnumerator EnemyAttackRoutine()

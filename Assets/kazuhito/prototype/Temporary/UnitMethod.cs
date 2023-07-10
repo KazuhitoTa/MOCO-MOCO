@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.UI;
+using System.Linq;
 
 public class UnitMethod : MonoBehaviour
 {
+    [SerializeField] UnitDataBase db;
+    UnitData data;
     private int MyNumber;
-    private int Hp;
+    private float Hp;
     private int Atk;
     private float AtkSpeed;
     public float currentHP;
@@ -16,30 +20,39 @@ public class UnitMethod : MonoBehaviour
     [SerializeField]UnitStatusSO unitStatusSO;
     private Coroutine bulletCreateCoroutine; 
     private BulletManager manager;
-    private List<Collider2D> collsionTemp=new List<Collider2D>();
+    [SerializeField]private EnemyMethod enemyMethod;
+    private Animator animator;
+    private Animator enemyAnimator;
+    private bool enemyCheck=false;
 
+   [SerializeField]private List<EnemyMethod>enemyMethods=new List<EnemyMethod>();
+    //private List<Collider2D> collsionTemp=new List<Collider2D>();
+
+    Collider2D collsionTemp;
     // 初期化
 	public void Init(int unitNumber)
 	{
-        MyNumber=unitNumber;
+        animator=GetComponent<Animator>();
         defaultState();
         CreateHealthBar();
-        var obj =GameObject.FindGameObjectWithTag("GameController");
-        manager=obj.GetComponent<BulletManager>();
+        data=db.GetDataInstance<GreenUnitData>(UnitGroup.Green);
+        Assert.IsNotNull<UnitDataBase>(db,"aaaaaaaaa");
+        Assert.IsNotNull<UnitData>(data,"bbbbbbb");
 	}
 
 	// Updateの呼び出しを制御する
 	public void ManagedUpdate()
 	{
-        if(hpBarImage!=null)hpBarImage.fillAmount=Mathf.Lerp(hpBarImage.fillAmount,currentHP/Hp,Time.deltaTime*10f);
-        if(collsionTemp.Count!=0)
+        if(enemyMethods.Count>0&&!enemyCheck)
         {
-            foreach (var collsion in collsionTemp)
-            {
-                bulletCreateCoroutine = StartCoroutine(BulletCreateRoutine(collsion));
-            }
-            collsionTemp.Clear();
+            enemyCheck=true;
+            StartCoroutine("UnitAttackRoutine");
+            //enemyMethods.Remove(enemyMethods.First());
+            //if(enemyMethods.First().DeathCheck())enemyCheck=false;
+            Debug.Log(enemyMethods.First().DeathCheck());
         }
+        
+        if(hpBarImage!=null)hpBarImage.fillAmount=Mathf.Lerp(hpBarImage.fillAmount,currentHP/Hp,Time.deltaTime*10f);  
 	}
     
     public void defaultState()
@@ -74,30 +87,45 @@ public class UnitMethod : MonoBehaviour
         }
     }
 
-    private IEnumerator BulletCreateRoutine(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collider2D)
     {
-        EnemyMethod enemyScriptTemp = collision.gameObject.GetComponent<EnemyMethod>();
-        while (enemyScriptTemp.currentHP > 0)
+        if (collider2D.gameObject.CompareTag("Enemy"))
         {
-            BulletCreate(enemyScriptTemp);
-            yield return new WaitForSeconds(AtkSpeed);
+            if(!enemyMethods.Contains(collider2D.gameObject.GetComponent<EnemyMethod>()))enemyMethods.Add(collider2D.gameObject.GetComponent<EnemyMethod>());            
+            
+            // if(enemyMethod==null)
+            // {
+            //     enemyMethod=collider2D.gameObject.GetComponent<EnemyMethod>();
+            //     StartCoroutine("UnitAttackRoutine");
+            // }
+            
         }
     }
 
-    private void BulletCreate(EnemyMethod enemy)
+    
+    private IEnumerator UnitAttackRoutine()
     {
-        Bullet bulletScriptTemp = manager.CreateBullet(MyNumber,transform.position);
-        bulletScriptTemp.GetInformation(enemy,MyNumber);  
+        while (enemyMethods.First() == null || (enemyMethods.First() != null && enemyMethods.First().currentHP > 0))
+        {
+            //enemyMethods.Remove(enemyMethods.First());
+            if(currentHP<Hp)currentHP+=2;
+            if (enemyMethods.First() != null)
+            {
+                animator.SetTrigger("Attack");
+                enemyMethods.First().ReduceHP(Atk);
+            }
+            yield return new WaitForSeconds(AtkSpeed);
+        }
+        
     }
+    
+    
 
-    public void HitEnemy(Collider2D collision)
-    {
-        collsionTemp.Add(collision);
-    }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collsionTemp.Remove(collision);
+        if (collision.gameObject.CompareTag("Enemy"))enemyMethod=null;
     }
 
 

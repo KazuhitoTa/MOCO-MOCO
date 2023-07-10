@@ -20,8 +20,10 @@ public class InGamePlayState : State<InGameStateID, InGameStateMachine>
         _enemyManager.EnemyAwake();
         _bulletManager.BulletAwake();
         ui.SetActive(false);
+        _unitManager._Start();
         _enemyManager.Init();
         _mapManager.Init();
+        
         cameraController._Start();
         _fieldTower.Init();
         

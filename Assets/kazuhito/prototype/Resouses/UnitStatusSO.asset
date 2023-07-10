@@ -16,70 +16,70 @@ MonoBehaviour:
   - unitModel: {fileID: 4843537972745724290, guid: 558e3557c0304ff4a821ee0e0fa78aef, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
-    hp: 15
-    attackSpeed: 0.1
+    hp: 30
+    attackSpeed: 1
     attack: 1
     unitNumber: 0
   - unitModel: {fileID: 1073991380588003824, guid: 26b129462b4785e4fad412bdfd2c5f2a, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
     hp: 30
-    attackSpeed: 10
+    attackSpeed: 1
     attack: 1
     unitNumber: 0
   - unitModel: {fileID: 8416021303783859547, guid: f1ebbc332a29af8418b0471e2d9603fe, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
-    hp: 50
-    attackSpeed: 0.1
+    hp: 5000
+    attackSpeed: 1
     attack: 30
     unitNumber: 0
   - unitModel: {fileID: 5373609508904696782, guid: a96ba9cde4503b94998bd8dbb840e312, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
     hp: 50
-    attackSpeed: 0.1
+    attackSpeed: 1
     attack: 30
     unitNumber: 0
   - unitModel: {fileID: 1037896492533297074, guid: 994e331a0fa1db8418d8007e0ce9b2ff, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
     hp: 50
-    attackSpeed: 0.1
+    attackSpeed: 1
     attack: 30
     unitNumber: 0
   - unitModel: {fileID: 4843537972745724290, guid: 558e3557c0304ff4a821ee0e0fa78aef, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
     hp: 50
-    attackSpeed: 0.1
+    attackSpeed: 1
     attack: 30
     unitNumber: 0
   - unitModel: {fileID: 4843537972745724290, guid: 558e3557c0304ff4a821ee0e0fa78aef, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
     hp: 50
-    attackSpeed: 0.1
+    attackSpeed: 1
     attack: 30
     unitNumber: 0
   - unitModel: {fileID: 4843537972745724290, guid: 558e3557c0304ff4a821ee0e0fa78aef, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
     hp: 50
-    attackSpeed: 0.1
+    attackSpeed: 1
     attack: 30
     unitNumber: 0
   - unitModel: {fileID: 4843537972745724290, guid: 558e3557c0304ff4a821ee0e0fa78aef, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
     hp: 50
-    attackSpeed: 0.1
+    attackSpeed: 1
     attack: 30
     unitNumber: 0
   - unitModel: {fileID: 4843537972745724290, guid: 558e3557c0304ff4a821ee0e0fa78aef, type: 3}
     bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
     unitName: 
     hp: 50
-    attackSpeed: 0.1
+    attackSpeed: 1
     attack: 30
     unitNumber: 0

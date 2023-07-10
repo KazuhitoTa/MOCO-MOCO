@@ -7,20 +7,26 @@ public class InGameLoadingState : State<InGameLoadStateID, InGameloadStateMachin
 {
     [SerializeField] private GameObject ui;
     private AsyncOperation asyncLoad;
+    [SerializeField]UnitDataBase unitDataBase;
     void Start()
     {
         ui.SetActive(false);
-        asyncLoad = SceneManager.LoadSceneAsync("InGame");
+        // asyncLoad = SceneManager.LoadSceneAsync("InGame");
+        // 
+        unitDataBase.Load();
     }
     public override void OnEntry()
     {
         ui.SetActive(true);
+        
         Debug.Log($"Loading:OnEntry");
     }
     public override void OnUpdate()
     {
         Debug.Log($"Loading:OnUpdate");
-        Debug.Log(asyncLoad.isDone);
+        // Debug.Log(asyncLoad.isDone);
+        // 
+        if (!unitDataBase.IsLoading)SceneManager.LoadScene("InGame");
     }
     public override void OnExit()
     {

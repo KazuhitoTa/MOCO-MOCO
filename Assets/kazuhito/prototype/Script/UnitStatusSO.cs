@@ -12,7 +12,6 @@ public class UnitStatusSO : ScriptableObject
     {
         [SerializeField] GameObject unitModel;
         [SerializeField] GameObject bulletModel;
-
         [SerializeField] string unitName;
         [SerializeField] int hp;
         [SerializeField] float attackSpeed;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -75,12 +76,40 @@ public class EnemyManager : MonoBehaviour
 
 	}
 
+	// public void ItemEnemyDamage()
+	// {
+	// 	var temp=_enemies;
+	// 	foreach (var item in temp)
+	// 	{
+	// 		item.ReduceHP(10);
+	// 	}
+	// }
+	public void ItemEnemyDamage()
+{
+    foreach (var enemy in _enemies.ToList())
+    {
+        if (enemy.currentHP > 0)
+        {
+            enemy.ReduceHP(3);
+        }
+    }
+}
+
+
+	// public void RemoveEnemy(EnemyMethod enemy)
+    // {
+    //     _enemies.Remove(enemy);
+	// 	Destroy(enemy.gameObject);
+    // }
+	
 	public void RemoveEnemy(EnemyMethod enemy)
+{
+    if (_enemies.Contains(enemy))
     {
         _enemies.Remove(enemy);
-		Destroy(enemy.gameObject);
+        Destroy(enemy.gameObject);
     }
-
+}
 
 	// Updateの呼び出しを制御する
 	public void ManagedUpdate()

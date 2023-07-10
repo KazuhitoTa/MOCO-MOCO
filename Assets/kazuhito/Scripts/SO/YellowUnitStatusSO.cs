@@ -12,12 +12,13 @@ public class YellowUnitStatusSO : ScriptableObject
     {
         [SerializeField] GameObject unitModel;
         [SerializeField] GameObject bulletModel;
+        [SerializeField] Sprite buttonImage;
         [SerializeField] string unitName;
         [SerializeField] int hp;
         [SerializeField] int attack;
         [SerializeField] int criticalProbability;
         [SerializeField] int criticalDamage;
-        [SerializeField] int attackSpeed;
+        [SerializeField] float attackSpeed;
         [SerializeField] int unitNumber;
         [SerializeField] int numbnessTime;
         [SerializeField] int numbnessInterval;
@@ -26,6 +27,7 @@ public class YellowUnitStatusSO : ScriptableObject
 
         public GameObject UnitModel{get=>unitModel;}
         public GameObject BulletModel{get=>bulletModel;}
+        public Sprite BottonImg{get=>buttonImage;}
         public string UnitName{get=>unitName;}
         public int HP{get=>hp;}
         public int Attack{get=>attack;}

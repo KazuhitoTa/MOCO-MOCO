@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be98d3bd0cd8fae43a603d97ed56e31e, type: 3}
+  m_Name: Enemyes
+  m_EditorClassIdentifier: 
+  EnemyDefaultStatuses:
+  - enemyModel: {fileID: 0}
+    bulletModel: {fileID: 0}
+    enemyName: 
+    hp: 50
+    attack: 10
+    criticalProbability: 10
+    criticalDamage: 1.3
+    attackSpeed: 1
+    moveSpeed: 1
+  - enemyModel: {fileID: 0}
+    bulletModel: {fileID: 0}
+    enemyName: 
+    hp: 170
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    moveSpeed: 0
+  - enemyModel: {fileID: 0}
+    bulletModel: {fileID: 0}
+    enemyName: 
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    moveSpeed: 0

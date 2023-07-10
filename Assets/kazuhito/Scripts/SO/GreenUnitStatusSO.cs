@@ -12,6 +12,7 @@ public class GreenUnitStatusSO : ScriptableObject
     {
         [SerializeField] GameObject unitModel;
         [SerializeField] GameObject bulletModel;
+        [SerializeField] Sprite buttonImage;
         [SerializeField] string unitName;
         [SerializeField] int hp;
         [SerializeField] int attack;
@@ -23,6 +24,7 @@ public class GreenUnitStatusSO : ScriptableObject
 
         public GameObject UnitModel{get=>unitModel;}
         public GameObject BulletModel{get=>bulletModel;}
+        public Sprite ButtonImage{get=>buttonImage;}
         public string UnitName{get=>unitName;}
         public int HP{get=>hp;}
         public int Attack{get=>attack;}
