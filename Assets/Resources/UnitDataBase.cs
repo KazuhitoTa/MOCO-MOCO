@@ -7,21 +7,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-[Serializable]
-    public sealed class InnerUnitData
+[System.Serializable]
+public sealed class InnerUnitData
+{
+    [SerializeField] private string name;
+    public readonly UnitGroup Name;
+    [SerializeField] private int level;
+    public readonly int Level;
+    public InnerUnitData(UnitGroup name, int level)
     {
-        [SerializeField] private string name;
-        public readonly UnitGroup Name;
-        [SerializeField] private int level;
-        public readonly int Level;
-        public InnerUnitData(UnitGroup name, int level)
-        {
-            Name = name;
-            this.name = name.ToString();
-            Level = level;
-            this.level = level;
-        }
+        Name = name;
+        this.name = name.ToString();
+        Level = level;
+        this.level = level;
     }
+}
 
 [Serializable]
 public class UnitDataBase : DataBase<UnitDataBase>
@@ -36,7 +36,7 @@ public class UnitDataBase : DataBase<UnitDataBase>
     void Start()
     {
         db = new();
-        //db.Add(new InnerUnitData(UnitName.Green, 1));
+        db.Add(new InnerUnitData(UnitGroup.Green, 1));
         foreach (UnitGroup group in Enum.GetValues(typeof(UnitGroup)))
         {
             db.Add(new InnerUnitData(group, 1));
@@ -77,7 +77,6 @@ public class UnitDataBase : DataBase<UnitDataBase>
         indices = new ();
         string json = await load();
         JsonUtility.FromJson<List<InnerUnitData>>(json);
-        Debug.Log("load");
         int index = 0;
         foreach (var data in db)
         {

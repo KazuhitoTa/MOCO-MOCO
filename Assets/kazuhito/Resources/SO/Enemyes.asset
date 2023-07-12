@@ -26,17 +26,17 @@ MonoBehaviour:
     bulletModel: {fileID: 0}
     enemyName: 
     hp: 170
-    attack: 0
-    criticalProbability: 0
-    criticalDamage: 0
-    attackSpeed: 0
-    moveSpeed: 0
+    attack: 25
+    criticalProbability: 20
+    criticalDamage: 1.5
+    attackSpeed: 1
+    moveSpeed: 0.8
   - enemyModel: {fileID: 0}
     bulletModel: {fileID: 0}
     enemyName: 
-    hp: 0
-    attack: 0
+    hp: 33
+    attack: 5
     criticalProbability: 0
-    criticalDamage: 0
-    attackSpeed: 0
-    moveSpeed: 0
+    criticalDamage: 1
+    attackSpeed: 1
+    moveSpeed: 2

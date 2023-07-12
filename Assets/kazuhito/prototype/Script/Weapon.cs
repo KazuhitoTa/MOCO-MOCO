@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    // public UnitMethod parentUnit;
+    public UnitMethod parentUnit;
     // private void OnTriggerEnter2D(Collider2D collision)
     // {
     //     if(collision.CompareTag("Enemy"))

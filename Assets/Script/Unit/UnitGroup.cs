@@ -7,4 +7,5 @@ using UnityEngine;
 public enum UnitGroup
 {
     Green,
+    Yellow,
 }

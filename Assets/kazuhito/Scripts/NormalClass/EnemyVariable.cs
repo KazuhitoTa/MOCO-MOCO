@@ -3,36 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UnitStatus
+public class EnemyVariable
 {
-    //攻撃をされたとき
     public Collider2D myCollider;
     public int HP;
     public GameObject hpBar;
     public Transform barPos;
     public Image hpBarImage;
-    public int currentHP;
-    public List<EnemyMethod> enemyMethods=new List<EnemyMethod>();
+    public List<GameObject> unitGameObjects=new List<GameObject>();
+    public List<GreenUnitStatus> greenUnitMethods=new List<GreenUnitStatus>();
+    public List<YellowUnitStatus> yellowUnitMethods=new List<YellowUnitStatus>();
     public int strage;
 
     //攻撃をしたとき
     public Collider2D enemyCollider;
     public int Attack;
-    public int AttackSpeed;
+    public float AttackSpeed;
     public BulletManager bulletManager;
 
     //それ以外
     public Animator animator;
-    public UnitState unitState;
+    public EnemyState enemyState;
     public EnemyMethod enemyMethod;
     public int kindNumber;
 
-
-    public enum UnitState
+    public enum EnemyState
     {
         stay,
         attack,
         death
     }
-
 }
