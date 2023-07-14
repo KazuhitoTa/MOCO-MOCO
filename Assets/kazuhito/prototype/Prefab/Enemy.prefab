@@ -216,13 +216,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8107317293049486482}
   - component: {fileID: 2173381158322074377}
+  - component: {fileID: 9092668895231969776}
   m_Layer: 0
-  m_Name: Wepon
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8107317293049486482
 Transform:
   m_ObjectHideFlags: 0
@@ -254,6 +255,19 @@ CircleCollider2D:
   m_Offset: {x: 0.24, y: -0.14}
   serializedVersion: 2
   m_Radius: 0.7
+--- !u!114 &9092668895231969776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853521107899872748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb6d4701743a634fae510a0098888b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentEnemy: {fileID: 0}
 --- !u!1001 &5284259314354728100
 PrefabInstance:
   m_ObjectHideFlags: 0

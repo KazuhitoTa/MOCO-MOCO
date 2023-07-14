@@ -21,7 +21,6 @@ public class EnemyMethod : MonoBehaviour
     private UnitMethod unitScriptTemp;
     private Tower towerScriptTemp;
     private Coroutine enemyAttackCoroutine; 
-
     private Collider2D collsionTemp;
 
     DateTime dt;

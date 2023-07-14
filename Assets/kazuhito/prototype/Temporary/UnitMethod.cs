@@ -19,6 +19,7 @@ public class UnitMethod : MonoBehaviour
         initState();
 
         CreateHealthBar();
+        unitStatus.kindNumber=kindNumber;
 
         var obj =GameObject.FindGameObjectWithTag("GameController");
         unitStatus.bulletManager=obj.GetComponent<BulletManager>(); 
