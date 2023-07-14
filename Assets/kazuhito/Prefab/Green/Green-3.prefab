@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 0.7
 --- !u!114 &6240781446742789094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0834ff29a0d74458bc7a2f6222922a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentUnit: {fileID: 1922140641002755623}
 --- !u!1 &6302770496005724600
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,9 +242,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   db: {fileID: 3411251721740314391, guid: 4b266e8373afb8c439a3f769a580a2bd, type: 3}
-  currentHP: 0
   hpBar: {fileID: 1435147124645040465, guid: fdedfd76bba39d94889afd323bb6d16e, type: 3}
   barPos: {fileID: 7364257602960351896}
-  unitStatusSO: {fileID: 11400000, guid: 253caa5320d06dd4fb673a11fd1c6bca, type: 2}
-  enemyMethod: {fileID: 0}
-  enemyMethods: []

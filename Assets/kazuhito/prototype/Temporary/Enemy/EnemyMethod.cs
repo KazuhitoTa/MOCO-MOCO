@@ -98,7 +98,7 @@ public class EnemyMethod : MonoBehaviour
     {
         if(unitScriptTemp!=null)
         {
-            while (unitScriptTemp.currentHP > 0)
+            while (unitScriptTemp.unitStatus.currentHP > 0)
             {
                 unitScriptTemp.ReduceHP(Atk);
                 yield return new WaitForSeconds(AtkSpeed);
@@ -141,4 +141,13 @@ public class EnemyMethod : MonoBehaviour
         
     }
     
+
+    public void HitEnemy(Collider2D collider2D)
+    {
+       
+    }
+    public void ExitEnemy(Collider2D collider2D)
+    {
+        
+    }
 }

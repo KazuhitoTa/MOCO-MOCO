@@ -28,14 +28,14 @@ MonoBehaviour:
     attack: 1
     unitNumber: 0
   - unitModel: {fileID: 8416021303783859547, guid: f1ebbc332a29af8418b0471e2d9603fe, type: 3}
-    bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
+    bulletModel: {fileID: 89168579826020583, guid: 0bc23fba4d563584f9c8d36718fe5900, type: 3}
     unitName: 
     hp: 5000
     attackSpeed: 1
     attack: 30
     unitNumber: 0
   - unitModel: {fileID: 5373609508904696782, guid: a96ba9cde4503b94998bd8dbb840e312, type: 3}
-    bulletModel: {fileID: 89168579826020583, guid: 8c8f0c71ca296ea46b4c35239762eb2f, type: 3}
+    bulletModel: {fileID: 89168579826020583, guid: 0bc23fba4d563584f9c8d36718fe5900, type: 3}
     unitName: 
     hp: 50
     attackSpeed: 1

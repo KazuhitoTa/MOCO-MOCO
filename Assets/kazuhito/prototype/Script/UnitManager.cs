@@ -73,7 +73,7 @@ public class UnitManager : MonoBehaviour
 	{
 		foreach (var item in _units.ToList())
 		{
-			item.currentHP+=10;
+			item.unitStatus.currentHP+=10;
 		}
 	}
 

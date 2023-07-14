@@ -148,10 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cdd24f184321140a878e211190d077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHP: 0
+  db: {fileID: 0}
   hpBar: {fileID: 1435147124645040465, guid: fdedfd76bba39d94889afd323bb6d16e, type: 3}
   barPos: {fileID: 6724849905314003561}
-  unitStatusSO: {fileID: 11400000, guid: 253caa5320d06dd4fb673a11fd1c6bca, type: 2}
 --- !u!1 &2743867561103317802
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,9 +197,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.06548524, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 0.7
 --- !u!114 &3613092881543061050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0834ff29a0d74458bc7a2f6222922a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentUnit: {fileID: 5524810498696984800}
 --- !u!1 &4350056899895522727
 GameObject:
   m_ObjectHideFlags: 0

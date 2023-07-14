@@ -11,15 +11,13 @@ public class Bullet : MonoBehaviour
     private int bulletNumber;
     [SerializeField]private UnitStatusSO unitStatusSO;
 
-   
     public void Init()
     {
         
     }
-    
     public void ManagedUpdate()
     {
-        atk=unitStatusSO.unitStatusList[bulletNumber].Attack;
+        //atk=unitStatusSO.unitStatusList[bulletNumber].Attack;
         if(enemyTarget!=null)
         {
             MoveBullet();
@@ -57,4 +55,8 @@ public class Bullet : MonoBehaviour
 
     }
 
+    public void GetDamage(int attack)
+    {
+        atk=attack;
+    }
 }

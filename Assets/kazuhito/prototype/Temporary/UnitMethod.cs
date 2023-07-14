@@ -1,65 +1,76 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.UI;
 using System.Linq;
 
 public class UnitMethod : MonoBehaviour
 {
+    public UnitStatus unitStatus=new UnitStatus();
     [SerializeField] UnitDataBase db;
-    UnitData data;
-    private int MyNumber;
-    private float Hp;
-    private int Atk;
-    private float AtkSpeed;
-    public float currentHP;
+    GreenUnitData data;
     [SerializeField]private GameObject hpBar;
     [SerializeField]private Transform barPos;
-    private Image hpBarImage;
-    [SerializeField]UnitStatusSO unitStatusSO;
-    private Coroutine bulletCreateCoroutine; 
-    private BulletManager manager;
-    [SerializeField]private EnemyMethod enemyMethod;
-    private Animator animator;
-    private Animator enemyAnimator;
-    private bool enemyCheck=false;
 
-   [SerializeField]private List<EnemyMethod>enemyMethods=new List<EnemyMethod>();
-    //private List<Collider2D> collsionTemp=new List<Collider2D>();
-
-    Collider2D collsionTemp;
-    // 初期化
-	public void Init(int unitNumber)
-	{
-        animator=GetComponent<Animator>();
-        defaultState();
-        CreateHealthBar();
-        data=db.GetDataInstance<GreenUnitData>(UnitGroup.Green);
-        Assert.IsNotNull<UnitDataBase>(db,"aaaaaaaaa");
-        Assert.IsNotNull<UnitData>(data,"bbbbbbb");
-	}
-
-	// Updateの呼び出しを制御する
-	public void ManagedUpdate()
-	{
-        if(enemyMethods.Count>0&&!enemyCheck)
-        {
-            enemyCheck=true;
-            StartCoroutine("UnitAttackRoutine");
-            //enemyMethods.Remove(enemyMethods.First());
-            //if(enemyMethods.First().DeathCheck())enemyCheck=false;
-            Debug.Log(enemyMethods.First().DeathCheck());
-        }
-        
-        if(hpBarImage!=null)hpBarImage.fillAmount=Mathf.Lerp(hpBarImage.fillAmount,currentHP/Hp,Time.deltaTime*10f);  
-	}
-    
-    public void defaultState()
+    /// <summary>
+    /// このユニットのStatusの初期化
+    /// </summary>
+    public void Init(int kindNumber)
     {
-        Hp=unitStatusSO.unitStatusList[MyNumber].HP;
-        Atk=unitStatusSO.unitStatusList[MyNumber].Attack;
-        AtkSpeed=unitStatusSO.unitStatusList[MyNumber].AttackSpeed;
+        initState();
+
+        CreateHealthBar();
+
+        var obj =GameObject.FindGameObjectWithTag("GameController");
+        unitStatus.bulletManager=obj.GetComponent<BulletManager>(); 
+    }
+
+    /// <summary>
+    /// Update
+    /// </summary>
+    public void ManagedUpdate()
+    {
+        
+        if(unitStatus.hpBarImage!=null)unitStatus.hpBarImage.fillAmount=Mathf.Lerp(unitStatus.hpBarImage.fillAmount,((float)unitStatus.currentHP/unitStatus.HP),Time.deltaTime*10f);
+        //unitStatus.enemyMethodsにnullがあるならその要素を削除
+        foreach (var item in unitStatus.enemyMethods.ToList())
+        {
+            if(item==null)unitStatus.enemyMethods.Remove(item);
+        }
+       
+        
+        //Unitの状態を管理
+        switch (unitStatus.unitState)
+        {
+            case UnitStatus.UnitState.stay:
+            //Debug.Log("Stay");
+            break;
+            case UnitStatus.UnitState.attack:
+            if(unitStatus.enemyMethods.Count==0)unitStatus.unitState=UnitStatus.UnitState.stay;
+            else
+            {
+                StartCoroutine(AttackCoroutine(1.5f));
+                unitStatus.unitState=UnitStatus.UnitState.stay;
+            }
+            break;
+            case UnitStatus.UnitState.death:
+            Debug.Log("Death");
+            break;
+        }
+    }
+
+    private void initState()
+    {
+        data=db.GetDataInstance<GreenUnitData>(UnitGroup.Green);
+        unitStatus.HP=50;
+        unitStatus.Attack=3;
+        unitStatus.AttackSpeed=1;
+        unitStatus.kindNumber=1;
+        unitStatus.strage=2;
+        unitStatus.animator=gameObject.AddComponent<Animator>();
+        unitStatus.unitState=UnitStatus.UnitState.stay;
+        unitStatus.kindNumber=1;
+        unitStatus.enemyMethods.Clear();
+        unitStatus.animator=gameObject.GetComponent<Animator>();
     }
 
     private void CreateHealthBar()
@@ -68,66 +79,82 @@ public class UnitMethod : MonoBehaviour
         newBar.transform.SetParent(transform);
 
         EnemyHPBar healthBar=newBar.GetComponent<EnemyHPBar>();
-        hpBarImage=healthBar.hpBarImage; 
-        currentHP=Hp;   
+        unitStatus.hpBarImage=healthBar.hpBarImage; 
+        unitStatus.currentHP=unitStatus.HP;   
     }
 
-    public void ReduceHP(float damage)
+    public void ReduceHP(int damage)
     {
-        currentHP-=damage;
+        unitStatus.currentHP-=damage;
         DeathChack();
     }
-    
-    private void DeathChack()
+
+     private void DeathChack()
     {
-        if(currentHP<=0)
+        if(unitStatus.currentHP<=0)
         {
-            currentHP=0;
+            unitStatus.currentHP=0;
+            //gameObject.SetActive(false);
             UnitManager.Instance.RemoveUnit(this);
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collider2D)
+    private void OnTriggerEnter2D(Collider2D collider2D)
     {
-        if (collider2D.gameObject.CompareTag("Enemy"))
+        //ユニットのStatusをattackに変更
+        if (collider2D.gameObject.CompareTag("Bullet"))
         {
-            if(!enemyMethods.Contains(collider2D.gameObject.GetComponent<EnemyMethod>()))enemyMethods.Add(collider2D.gameObject.GetComponent<EnemyMethod>());            
-            
-            // if(enemyMethod==null)
-            // {
-            //     enemyMethod=collider2D.gameObject.GetComponent<EnemyMethod>();
-            //     StartCoroutine("UnitAttackRoutine");
-            // }
-            
+            Debug.Log("hit");
+            Bullet temp=collider2D.GetComponent<Bullet>();
+
         }
     }
 
-    
-    private IEnumerator UnitAttackRoutine()
+    IEnumerator AttackCoroutine(float createInterval)
     {
-        while (enemyMethods.First() == null || (enemyMethods.First() != null && enemyMethods.First().currentHP > 0))
+        if (unitStatus.enemyMethods.Count > 0)
         {
-            //enemyMethods.Remove(enemyMethods.First());
-            if(currentHP<Hp)currentHP+=2;
-            if (enemyMethods.First() != null)
+            EnemyMethod enemyMethod = unitStatus.enemyMethods.First();
+            while (enemyMethod.currentHP > 0&&enemyMethod==unitStatus.enemyMethods[0])
             {
-                animator.SetTrigger("Attack");
-                enemyMethods.First().ReduceHP(Atk);
+                if (unitStatus.enemyMethods.Count <= 0)break;
+                
+                    BulletCreate(enemyMethod);
+                    if (unitStatus.enemyMethods.Count <= 0)break;
+                    unitStatus.animator.SetTrigger("Attack");
+                    yield return new WaitForSeconds(createInterval);
+                
+                
             }
-            yield return new WaitForSeconds(AtkSpeed);
         }
-        
     }
-    
-    
 
 
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void BulletCreate(EnemyMethod enemyMethod)
     {
-        if (collision.gameObject.CompareTag("Enemy"))enemyMethod=null;
+        Bullet bulletScriptTemp = unitStatus.bulletManager.CreateBullet(unitStatus.kindNumber,transform.position); 
+        bulletScriptTemp.GetDamage(unitStatus.Attack);
+        bulletScriptTemp.GetInformation(enemyMethod,unitStatus.kindNumber);  
+    }
+
+    public void HitEnemy(Collider2D collider2D)
+    {
+        unitStatus.enemyMethods.Add(collider2D.GetComponent<EnemyMethod>());
+        if(unitStatus.enemyMethods.Count==1)unitStatus.unitState=UnitStatus.UnitState.attack;
+    }
+    public void ExitEnemy(Collider2D collider2D)
+    {
+        unitStatus.enemyMethods.Remove(collider2D.gameObject.GetComponent<EnemyMethod>());
+        if(unitStatus.enemyMethods.Count>0)unitStatus.unitState=UnitStatus.UnitState.attack;
+    }
+
+    public bool AttackCheck()
+    {
+        return unitStatus.enemyMethods.Count < unitStatus.strage;
     }
 
 
+    
 
 }

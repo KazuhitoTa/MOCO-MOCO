@@ -17,16 +17,7 @@ public class GreenUnitStatus : MonoBehaviour
     /// </summary>
     public void ManagedStart()
     {
-        data=db.GetDataInstance<GreenUnitData>(UnitGroup.Green);
-        unitStatus.HP=10;
-        unitStatus.Attack=2;
-        unitStatus.AttackSpeed=1;
-        unitStatus.kindNumber=1;
-        unitStatus.strage=2;
-        unitStatus.animator=gameObject.AddComponent<Animator>();
-        unitStatus.unitState=UnitStatus.UnitState.stay;
-        unitStatus.kindNumber=1;
-        unitStatus.enemyMethods.Clear();
+        initState();
 
         CreateHealthBar();
 
@@ -58,6 +49,20 @@ public class GreenUnitStatus : MonoBehaviour
             Debug.Log("Death");
             break;
         }
+    }
+
+    private void initState()
+    {
+        data=db.GetDataInstance<GreenUnitData>(UnitGroup.Green);
+        unitStatus.HP=10;
+        unitStatus.Attack=2;
+        unitStatus.AttackSpeed=1;
+        unitStatus.kindNumber=1;
+        unitStatus.strage=2;
+        unitStatus.animator=gameObject.AddComponent<Animator>();
+        unitStatus.unitState=UnitStatus.UnitState.stay;
+        unitStatus.kindNumber=1;
+        unitStatus.enemyMethods.Clear();
     }
 
     private void CreateHealthBar()
@@ -94,10 +99,10 @@ public class GreenUnitStatus : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider2D)
     {
         //ユニットのStatusをattackに変更
-        if (collider2D.gameObject.CompareTag("Enemy"))
+        if (collider2D.gameObject.CompareTag("Bullet"))
         {
-            unitStatus.unitState=UnitStatus.UnitState.attack;
-            unitStatus.enemyMethods.Add(collider2D.GetComponent<EnemyMethod>());
+            UnitBullet temp=collider2D.GetComponent<UnitBullet>();
+            ReduceHP(temp.Damage());
         }
     }
 
@@ -105,18 +110,16 @@ public class GreenUnitStatus : MonoBehaviour
     /// 銃弾を生成するメソッド
     /// </summary>
     /// <returns></returns>
-    public GameObject CreateBullet()
+    public GameObject CreateBullet(EnemyMethod enemyMethod)
     {
         return Instantiate(bulletGameObject,transform.position,Quaternion.identity); 
     }
 
     IEnumerator AttackCoroutine(float createInterval)
     {
-        while (true)
+        while (unitStatus.enemyMethods.First().currentHP>0)
         {
-            
-            
-            
+             
             yield return new WaitForSeconds(createInterval);
 
             // 敵が存在しなくなったらCoroutineを終了する
@@ -130,6 +133,11 @@ public class GreenUnitStatus : MonoBehaviour
     bool IsEnemyAlive()
     {
         return true;
+    }
+
+    public void HitEnemy(Collider2D collider2D)
+    {
+        unitStatus.enemyMethods.Add(collider2D.GetComponent<EnemyMethod>());
     }
 
     public bool AttackCheck()
