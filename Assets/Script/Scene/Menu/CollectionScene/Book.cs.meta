@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/gomi.cs.meta
-guid: b731a7710db88e84f9691bdeaaaae2ca
-========
 guid: 2943a0a325c3e7640af740dc66115cf3
->>>>>>>> main:Assets/Script/Scene/Menu/CollectionScene/Book.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
