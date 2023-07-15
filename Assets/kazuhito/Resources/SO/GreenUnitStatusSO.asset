@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d451ac35a9e0e3146a835ce988ced410, type: 3}
+  m_Name: GreenUnitStatusSO
+  m_EditorClassIdentifier: 
+  greenUnitStatuses:
+  - unitModel: {fileID: 4843537972745724290, guid: 558e3557c0304ff4a821ee0e0fa78aef, type: 3}
+    bulletModel: {fileID: 0}
+    buttonImage: {fileID: -72298201, guid: 15c03ae385072174d83cb0c662fa0012, type: 3}
+    unitName: "\u307F\u3069\u308A\uFF11"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
+  - unitModel: {fileID: 1073991380588003824, guid: 26b129462b4785e4fad412bdfd2c5f2a, type: 3}
+    bulletModel: {fileID: 0}
+    buttonImage: {fileID: 62145928, guid: ed9bdd2fa8a6eb14ab6746284810ea1c, type: 3}
+    unitName: "\u307F\u3069\u308A\uFF12"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
+  - unitModel: {fileID: 8416021303783859547, guid: f1ebbc332a29af8418b0471e2d9603fe, type: 3}
+    bulletModel: {fileID: 0}
+    buttonImage: {fileID: 1518962888, guid: f806ac45a3491344884d805e513dae61, type: 3}
+    unitName: "\u307F\u3069\u308A\uFF13"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
+  - unitModel: {fileID: 5373609508904696782, guid: a96ba9cde4503b94998bd8dbb840e312, type: 3}
+    bulletModel: {fileID: 0}
+    buttonImage: {fileID: 1817906761, guid: 2d501e314871b5f47b02212bd3fbc29b, type: 3}
+    unitName: "\u307F\u3069\u308A\uFF14"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
+  - unitModel: {fileID: 1037896492533297074, guid: 994e331a0fa1db8418d8007e0ce9b2ff, type: 3}
+    bulletModel: {fileID: 0}
+    buttonImage: {fileID: 1208566175, guid: 06597cd379801304eb2672c1d4c82559, type: 3}
+    unitName: "\u307F\u3069\u308A\uFF15"
+    hp: 0
+    attack: 0
+    criticalProbability: 0
+    criticalDamage: 0
+    attackSpeed: 0
+    unitNumber: 0
