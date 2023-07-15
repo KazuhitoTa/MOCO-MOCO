@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: ed721866932af9c4895d302b65c0a4a5
+<<<<<<< HEAD:Assets/Script/Unit/UnitGroup.cs.meta
+guid: d166d66879af15a479917cf122fc46c7
+=======
+guid: 0316808df75466246a22cca1d9d4cf0b
+>>>>>>> parent of 7f84b52 (gomi):Assets/Script/Enemy/Enemy.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

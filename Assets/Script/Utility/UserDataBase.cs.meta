@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 66ca657e09bcda44b8ce07caf5ca773e
+<<<<<<< HEAD:Assets/Script/Unit/UnionLevel.cs.meta
+guid: 92d8e19ca4ebad845b0be993a4e43fc5
 =======
-guid: 11a26cd43f748224db227754d2c6e9f8
->>>>>>> parent of 7f84b52 (gomi)
+guid: 2de1216e3ab21c345b7818d7268d8e04
+>>>>>>> parent of 7f84b52 (gomi):Assets/Script/Utility/UserDataBase.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

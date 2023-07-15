@@ -101,7 +101,7 @@ where TStateMachine : StateMachine<TStateID, TStateMachine>
 
     /// <summary>
     /// ステートを戻すフラグを立てる <br/>
-    /// 次のフレームで退状処理がされてから遷移する
+    /// 次のフレームで退場処理がされてから遷移する
     /// </summary>
     public void SetBackFlag()
     {
@@ -111,7 +111,7 @@ where TStateMachine : StateMachine<TStateID, TStateMachine>
 
     /// <summary>
     /// ステートを進むフラグを立てる <br/>
-    /// 次のフレームで退状処理がされてから遷移する
+    /// 次のフレームで退場処理がされてから遷移する
     /// </summary>
     /// <param name="nextStateID">次のステートID</param>
     /// <param name="willRecord">スタックに記録するフラグ</param>

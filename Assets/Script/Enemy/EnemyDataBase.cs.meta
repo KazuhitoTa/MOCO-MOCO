@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Script/Utility/StageID.cs.meta
+<<<<<<<< HEAD:Assets/Script/Utility/StageID.cs.meta
+guid: 3aa7b2236129e864096d8ba6a0c30c7e
+========
+guid: a8158115c7d906f4abde09ff57307992
+>>>>>>>> test:Assets/Resources/GreenUnitData.cs.meta
+=======
+guid: e036ec9656929cb4591a9b674ad4f58c
+>>>>>>> parent of 7f84b52 (gomi):Assets/Script/Enemy/EnemyDataBase.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Script/Unit/GreenUnitData.cs.meta
+<<<<<<<< HEAD:Assets/Script/Unit/GreenUnitData.cs.meta
+guid: 079f4d2bf7bca324f87d15f397882d4d
+========
+guid: 459dcd3a960c2124f9d38689a9dec8fb
+>>>>>>>> test:Assets/Resources/UnitDataBase.cs.meta
+=======
+guid: 17fa740eefa120a4495acb1c83a43f6d
+>>>>>>> parent of 7f84b52 (gomi):Assets/Script/Unit/UnitName.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
