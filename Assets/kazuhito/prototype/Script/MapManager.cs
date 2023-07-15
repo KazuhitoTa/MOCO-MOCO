@@ -34,12 +34,15 @@ public class MapManager : MonoBehaviour
     [SerializeField]Sprite[] images2;
     [SerializeField]Image button1;
     [SerializeField]Image button2;
+
+    [SerializeField]List<GameObject> towers=new List<GameObject>();
     
     /// <summary>
     /// Start
     /// </summary>
     public void Init()
     {
+
         //MapInit();
         MapCreateTest();
         UnitInit();
@@ -127,11 +130,11 @@ public class MapManager : MonoBehaviour
     /// </summary>
     void UnitInit()
     {
-        unitNumber =6;//Random.Range(4,7); 
+        unitNumber =3;//Random.Range(4,7); 
         nextUnitList2.Insert(0, unitNumber - 1);
         NextCharacter();
     
-        unitNumber = 5;//Random.Range(1,4);
+        unitNumber = 3;//Random.Range(1,4);
         nextUnitList.Insert(0, unitNumber - 1);
         NextCharacter();
     }
@@ -464,6 +467,7 @@ public class MapManager : MonoBehaviour
         unitChoice=1;
         unitNumber=nextUnitList2[0]+1;
     }
+
 
     //使用していない
     // void TowerPut()

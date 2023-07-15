@@ -19,7 +19,7 @@ public class Enemyes : ScriptableObject
         [SerializeField] float attackSpeed;
         [SerializeField] float moveSpeed;
 
-        public GameObject EnmyModel{get=>enemyModel;}
+        public GameObject EnemyModel{get=>enemyModel;}
         public GameObject BulletModel{get=>bulletModel;}
         public string EnemyName{get=>enemyName;}
         public int HP{get=>hp;}

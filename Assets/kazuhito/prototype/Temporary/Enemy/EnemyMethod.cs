@@ -6,55 +6,61 @@ using System;
 
 public class EnemyMethod : MonoBehaviour
 {
-    Transform target;
+    Vector3 target;
     bool test;
     private int Hp;
     private int Atk;
     private int Def;
     private float AtkSpeed;
+    private float Speed;
     public float currentHP;
     [SerializeField]private GameObject hpBar;
     [SerializeField]private Transform barPos;
     private Image hpBarImage;
     [SerializeField]EnemyStatusSO enemyStatusSO;
+    [SerializeField]Enemyes enemyes;
     Animator animator;
     private UnitMethod unitScriptTemp;
     private Tower towerScriptTemp;
     private Coroutine enemyAttackCoroutine; 
     private Collider2D collsionTemp;
+    public List<Vector3> unitMove=new List<Vector3>();
 
     DateTime dt;
 
     // 初期化
 	public void Init(int enemyNumber)
 	{
-        Hp=enemyStatusSO.enemyStatusList[enemyNumber].HP;
-        Atk=enemyStatusSO.enemyStatusList[enemyNumber].Attack;
-        AtkSpeed=enemyStatusSO.enemyStatusList[enemyNumber].AttackSpeed;
+        //Hp=enemyStatusSO.enemyStatusList[enemyNumber].HP;
+        Hp=enemyes.EnemyDefaultStatuses[enemyNumber].HP;
+        //Atk=enemyStatusSO.enemyStatusList[enemyNumber].Attack;
+        Atk=enemyes.EnemyDefaultStatuses[enemyNumber].Attack;
+        //AtkSpeed=enemyStatusSO.enemyStatusList[enemyNumber].AttackSpeed;
+        AtkSpeed=enemyes.EnemyDefaultStatuses[enemyNumber].AttackSpeed;
+        Speed=enemyes.EnemyDefaultStatuses[enemyNumber].MoveSpeed;
         CreateHealthBar();
         animator = GetComponent<Animator>();
+
+        unitMove.Add(new Vector3(-6.1f,2.5f,0f));
+        unitMove.Add(new Vector3(-0.1f,2.5f,0f));
+        unitMove.Add(new Vector3(5.8f,2.5f,0f));
+       
+        target=unitMove[1];
 	}
 
 	// Updateの呼び出しを制御する
 	public void ManagedUpdate()
-	{
-        var pos=gameObject.transform.position;
-        pos.z=pos.y/1000f;
-        gameObject.transform.position=new Vector3(pos.x,pos.y,pos.z);
-        if(!test)
+	{   
+        if(towerScriptTemp==null&&unitScriptTemp==null)
         {
-            target = GameObject.FindWithTag("Tower").transform;
-            test=!test;
+            if(Vector3.Distance(unitMove[1],transform.position)<0.1f)
+            {
+                if(Atk%2==0)target=unitMove[2];
+                else target=unitMove[0];
+            }
+            
+            transform.position = Vector3.MoveTowards(transform.position, target, Speed * Time.deltaTime);
         }
-        if(unitScriptTemp!=null||towerScriptTemp!=null)
-        {
-            //
-            //collsionTemp=null;
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, 1.0f * Time.deltaTime);
-        } 
         
         hpBarImage.fillAmount=Mathf.Lerp(hpBarImage.fillAmount,currentHP/Hp,Time.deltaTime*10f);
 	}    

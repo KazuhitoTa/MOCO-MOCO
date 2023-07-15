@@ -23,19 +23,9 @@ MonoBehaviour:
     - enemySpawn: {x: 7, y: -6}
       enemySpawnNumber: 1
     - enemySpawn: {x: 14, y: -6}
-      enemySpawnNumber: 0
+      enemySpawnNumber: 2
     - enemySpawn: {x: 15, y: 3}
       enemySpawnNumber: 1
-    - enemySpawn: {x: 10, y: 3}
-      enemySpawnNumber: 0
-    - enemySpawn: {x: 7, y: 8}
-      enemySpawnNumber: 1
-    - enemySpawn: {x: 7, y: 10}
-      enemySpawnNumber: 0
-    - enemySpawn: {x: 9, y: 9}
-      enemySpawnNumber: 1
-    - enemySpawn: {x: 8, y: 11}
-      enemySpawnNumber: 0
     waves: []
   - mapTileModel: {fileID: 0}
     stageName: 

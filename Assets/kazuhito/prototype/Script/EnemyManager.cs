@@ -6,7 +6,7 @@ using System.Linq;
 
 public class EnemyManager : MonoBehaviour
 {
-	[SerializeField]EnemyStatusSO enemyStatusSO;
+	[SerializeField]Enemyes enemyes;
 	[SerializeField]MapStatusSO mapStatusSO;
 	private Coroutine EnemyCreateCoroutine;
 	[SerializeField]TextMeshProUGUI text;
@@ -40,7 +40,7 @@ public class EnemyManager : MonoBehaviour
 	// 敵を生成する
 	public EnemyMethod CreateEnemy(int enemyNumber,Vector2 pos)
 	{
-		var obj = Instantiate(enemyStatusSO.enemyStatusList[enemyNumber].EnemyModel,pos,Quaternion.identity);
+		var obj = Instantiate(enemyes.EnemyDefaultStatuses[enemyNumber].EnemyModel,pos,Quaternion.identity);
 
 		var enemy = obj.GetComponent<EnemyMethod>();
 		if (enemy != null)

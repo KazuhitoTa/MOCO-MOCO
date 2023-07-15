@@ -7,7 +7,7 @@ public class GreenUnitStatus : MonoBehaviour
 {
     private UnitStatus unitStatus=new UnitStatus();
     [SerializeField] UnitDataBase db;
-    GreenUnitData data;
+    //GreenUnitData data;
     public GameObject bulletGameObject;
     [SerializeField]private GameObject hpBar;
     [SerializeField]private Transform barPos;
@@ -53,7 +53,7 @@ public class GreenUnitStatus : MonoBehaviour
 
     private void initState()
     {
-        data=db.GetDataInstance<GreenUnitData>(UnitGroup.Green);
+        //data=db.GetDataInstance<GreenUnitData>(UnitGroup.Green);
         unitStatus.HP=10;
         unitStatus.Attack=2;
         unitStatus.AttackSpeed=1;

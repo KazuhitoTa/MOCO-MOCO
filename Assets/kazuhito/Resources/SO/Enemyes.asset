@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enemyes
   m_EditorClassIdentifier: 
   EnemyDefaultStatuses:
-  - enemyModel: {fileID: 0}
+  - enemyModel: {fileID: 3255399201851848945, guid: c163949603353614d8211f4d94c0a308, type: 3}
     bulletModel: {fileID: 0}
     enemyName: 
     hp: 50
@@ -22,7 +22,7 @@ MonoBehaviour:
     criticalDamage: 1.3
     attackSpeed: 1
     moveSpeed: 1
-  - enemyModel: {fileID: 0}
+  - enemyModel: {fileID: 3255399201851848945, guid: 67616a0edf17ddd4dac37f7b6b387636, type: 3}
     bulletModel: {fileID: 0}
     enemyName: 
     hp: 170
@@ -31,7 +31,7 @@ MonoBehaviour:
     criticalDamage: 1.5
     attackSpeed: 1
     moveSpeed: 0.8
-  - enemyModel: {fileID: 0}
+  - enemyModel: {fileID: 3255399201851848945, guid: 63cf01210c323e542b856defb2567954, type: 3}
     bulletModel: {fileID: 0}
     enemyName: 
     hp: 33

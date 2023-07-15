@@ -13,6 +13,7 @@ public class InGamePlayState : State<InGameStateID, InGameStateMachine>
     [SerializeField]CameraController cameraController=null;
     [SerializeField]EnemyManager _enemyManager=null;
     [SerializeField]Tower _fieldTower=null;
+    [SerializeField]Tower _fieldTower2=null;
     
     void Start()
     {
@@ -26,6 +27,7 @@ public class InGamePlayState : State<InGameStateID, InGameStateMachine>
         
         cameraController._Start();
         _fieldTower.Init();
+        _fieldTower2.Init();
         
     }
     public override void OnEntry()//updateの最初
@@ -41,6 +43,7 @@ public class InGamePlayState : State<InGameStateID, InGameStateMachine>
         _bulletManager.BulletUpdate();
         cameraController._Update();
         _fieldTower.ManagedUpdate();
+        _fieldTower2.ManagedUpdate();
         if (Input.GetKeyDown(KeyCode.Space))
         {
             stateMachine.SetMoveFlag(InGameStateID.Pose);

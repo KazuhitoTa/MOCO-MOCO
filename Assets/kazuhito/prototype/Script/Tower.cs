@@ -11,10 +11,15 @@ public class Tower : MonoBehaviour
     [SerializeField]private GameObject hpBar;
     [SerializeField]private Transform barPos;
     private Image hpBarImage;
-    
+    [SerializeField]TextMeshProUGUI gameOver;
+    private MapManager mapManager;
+    private int myNumber;
+    private int towerCount=0;
+    private int unitChoice;
 
 	public void Init()
 	{
+        mapManager=GameObject.FindWithTag("GameController").transform.GetComponent<MapManager>();
         Hp=100;
         CreateHealthBar();
 	}
@@ -46,9 +51,19 @@ public class Tower : MonoBehaviour
         if(currentHP<=0)
         {
             currentHP=0;
-            //gameOver.text="GameOver";
+            gameObject.SetActive(false);
+            //mapManager.TowerCountMinus(myNumber);
         }
     }
+
+    public int GetNumber(int Number)
+    {
+        myNumber=Number;
+        //Debug.Log(myNumber);
+        return myNumber;
+    }
+
+    
 
 
 

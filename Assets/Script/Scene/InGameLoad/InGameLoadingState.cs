@@ -13,7 +13,7 @@ public class InGameLoadingState : State<InGameLoadStateID, InGameloadStateMachin
         ui.SetActive(false);
         // asyncLoad = SceneManager.LoadSceneAsync("InGame");
         // 
-        unitDataBase.Load();
+        unitDataBase.LoadAsync();
     }
     public override void OnEntry()
     {

@@ -15,14 +15,14 @@ where T : MonoBehaviour
     protected abstract string FileName { get; }
     protected abstract string Path { get; }
     protected abstract string Key { get; }
-    protected bool isEdited = false;
+    protected bool isEdited = true;
     public bool IsLoading { get; protected set; } = false;
     public bool IsSaveing { get; protected set; } = false;
-    public virtual async void Load() { await Task.Delay(1); }
-    public virtual async void Save() { await Task.Delay(1); }
+    public virtual async void LoadAsync() { await Task.Delay(1); }
+    public virtual async void SaveAsync() { await Task.Delay(1); }
     #if UNITY_EDITOR
     protected bool isDump = true;
-    protected int step = -1;
+    protected int step = -2;
     #endif
     private IReadOnlyList<(string json, string base64)> stringTable = new List<(string json, string base64)>()
     {
@@ -93,7 +93,7 @@ where T : MonoBehaviour
         return result;
     }
 
-    protected async Task save(string json)
+    protected async Task saveAsync(string json)
     {
         #if !UNITY_EDITOR
         if (!isEdited) return;
@@ -110,16 +110,19 @@ where T : MonoBehaviour
         #if UNITY_EDITOR
         if (isDump)
         {
+            Debug.Log("save");
             Debug.Log($"json:{json}");
             Debug.Log($"base64:{base64}");
             Debug.Log($"encrypted:{encrypted}");
         }
         #endif
 
+        isEdited = false;
+
         IsSaveing = false;
     }
 
-    protected async Task<string> load()
+    protected async Task<string> loadAsync()
     {
         IsLoading = true;
 
@@ -133,6 +136,7 @@ where T : MonoBehaviour
         #if UNITY_EDITOR
         if (isDump)
         {
+            Debug.Log("load");
             Debug.Log($"encrypted:{encrypted}");
             Debug.Log($"base64:{base64}");
             Debug.Log($"json:{json}");

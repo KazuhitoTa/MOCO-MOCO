@@ -52,14 +52,14 @@ public class UnitDataBase : DataBase<UnitDataBase>
         switch (step)
         {
             case 0:
-                Save();
+                SaveAsync();
                 step++;
                 break;
             case 1:
                 if (!IsSaveing) step++;
                 break;
             case 2:
-                Load();
+                LoadAsync();
                 step++;
                 break;
             case 3:
@@ -71,11 +71,11 @@ public class UnitDataBase : DataBase<UnitDataBase>
         #endif
     }
 
-    public override async void Load()
+    public override async void LoadAsync()
     {
         db = new();
         indices = new ();
-        string json = await load();
+        string json = await loadAsync();
         JsonUtility.FromJson<List<InnerUnitData>>(json);
         int index = 0;
         foreach (var data in db)
@@ -84,10 +84,10 @@ public class UnitDataBase : DataBase<UnitDataBase>
         }
     }
 
-    public override async void Save()
+    public override async void SaveAsync()
     {
         string json = JsonUtility.ToJson(db);
-        await save(json);
+        await saveAsync(json);
     }
 
     public T GetDataInstance<T>(UnitGroup name)

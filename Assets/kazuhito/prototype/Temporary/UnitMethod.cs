@@ -7,19 +7,32 @@ public class UnitMethod : MonoBehaviour
 {
     public UnitStatus unitStatus=new UnitStatus();
     [SerializeField] UnitDataBase db;
-    GreenUnitData data;
+    private int Level;
+    
     [SerializeField]private GameObject hpBar;
     [SerializeField]private Transform barPos;
+    private GameObject test;
 
     /// <summary>
     /// このユニットのStatusの初期化
     /// </summary>
     public void Init(int kindNumber)
     {
-        initState();
+        //test=GameObject.FindGameObjectWithTag("UnitDataBase");
+        //Debug.Log(test);
+        //db=test.GetComponent<UnitDataBase>();
+        //Debug.Log(db);
+        //まじでゴミ
+        if(kindNumber>4)unitStatus.kindNumber=kindNumber-5;
+        else unitStatus.kindNumber=kindNumber;
 
+
+        InitState();
+        //Debug.Log(db.GetGrowthLevel(UnitGroup.Green));
+        //Level = db.GetGrowthLevel(UnitGroup.Green);
         CreateHealthBar();
         unitStatus.kindNumber=kindNumber;
+        //Debug.Log(unitStatus.kindNumber);
 
         var obj =GameObject.FindGameObjectWithTag("GameController");
         unitStatus.bulletManager=obj.GetComponent<BulletManager>(); 
@@ -59,17 +72,20 @@ public class UnitMethod : MonoBehaviour
         }
     }
 
-    private void initState()
+    private void InitState()
     {
-        data=db.GetDataInstance<GreenUnitData>(UnitGroup.Green);
-        unitStatus.HP=50;
-        unitStatus.Attack=3;
-        unitStatus.AttackSpeed=1;
-        unitStatus.kindNumber=1;
+        //Level=db.GetGrowthLevel(UnitGroup.Green);
+        //Debug.Log(Level);
+        //data=db.GetDataInstance<GreenUnitData>(UnitGroup.Green);
+        unitStatus.HP=unitStatus.GetHP(3,unitStatus.kindNumber+1);
+        Debug.Log(unitStatus.HP);
+        unitStatus.Attack=unitStatus.GetAttack(3,unitStatus.kindNumber+1);
+        unitStatus.AttackSpeed=unitStatus.GetAttackSpeed(1);
+        //unitStatus.kindNumber=1;
         unitStatus.strage=2;
         unitStatus.animator=gameObject.AddComponent<Animator>();
         unitStatus.unitState=UnitStatus.UnitState.stay;
-        unitStatus.kindNumber=1;
+        //unitStatus.kindNumber=1;
         unitStatus.enemyMethods.Clear();
         unitStatus.animator=gameObject.GetComponent<Animator>();
     }
@@ -116,18 +132,15 @@ public class UnitMethod : MonoBehaviour
         if (unitStatus.enemyMethods.Count > 0)
         {
             EnemyMethod enemyMethod = unitStatus.enemyMethods.First();
-            while (enemyMethod.currentHP > 0&&enemyMethod==unitStatus.enemyMethods[0])
+            while (unitStatus.enemyMethods.Count > 0 && enemyMethod.currentHP > 0 && enemyMethod == unitStatus.enemyMethods[0])
             {
-                if (unitStatus.enemyMethods.Count <= 0)break;
-                
-                    BulletCreate(enemyMethod);
-                    if (unitStatus.enemyMethods.Count <= 0)break;
-                    unitStatus.animator.SetTrigger("Attack");
-                    yield return new WaitForSeconds(createInterval);
-                
-                
+                BulletCreate(enemyMethod);
+                if (unitStatus.enemyMethods.Count <= 0) break;
+                unitStatus.animator.SetTrigger("Attack");
+                yield return new WaitForSeconds(createInterval);
             }
         }
+
     }
 
 
@@ -154,7 +167,6 @@ public class UnitMethod : MonoBehaviour
     {
         return unitStatus.enemyMethods.Count < unitStatus.strage;
     }
-
 
     
 
