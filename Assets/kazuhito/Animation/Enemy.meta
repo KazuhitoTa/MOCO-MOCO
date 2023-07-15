@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/kazuhito/Animation/Enemy.meta
 guid: 12b78b42a16b92b44a85b48eae622a2d
+========
+guid: 41f4a3f61864ae940847b2a51a4c3db5
+>>>>>>>> main:Assets/Resources.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
