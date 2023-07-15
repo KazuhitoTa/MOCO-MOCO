@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Script/Utility/StageID.cs.meta
-guid: b96d3f8e0ff806a408d54d547b531626
-========
-guid: a8158115c7d906f4abde09ff57307992
->>>>>>>> test:Assets/Resources/GreenUnitData.cs.meta
+guid: 491603bcee5551b4a9095e5d9a1c3802
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
