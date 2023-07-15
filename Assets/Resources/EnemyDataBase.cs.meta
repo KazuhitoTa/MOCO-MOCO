@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Script/Unit/UnionLevel.cs.meta
+guid: fd79bd7d177e2bd43b34ba279d67beb4
+========
+guid: 9b567d27e46f1f840b1e0baacd64d716
+>>>>>>>> test:Assets/Resources/EnemyDataBase.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

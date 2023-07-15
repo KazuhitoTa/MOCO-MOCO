@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
+  - Enemy
+  - Tower
   layers:
   - Default
   - TransparentFX
@@ -11,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -38,6 +41,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 3734837753
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tower
+    uniqueID: 1504697643
+    locked: 0
+  - name: Player
+    uniqueID: 4087390371
+    locked: 0
+  - name: UI
+    uniqueID: 1579555843
     locked: 0
