@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Utility.meta
 guid: ff12bf49d195844489e4ee22cdce4ea7
+=======
+guid: 7bfb05807960abd42aea3f0169abb3a2
+>>>>>>> parent of add5387 (Merge pull request #2 from KazuhitoTa/vbgh):Assets/Script/Utility.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

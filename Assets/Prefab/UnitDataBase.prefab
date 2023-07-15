@@ -41,7 +41,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3411251721740314390}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 459dcd3a960c2124f9d38689a9dec8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   db: []
+=======
+  m_Script: {fileID: 11500000, guid: 491603bcee5551b4a9095e5d9a1c3802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> parent of add5387 (Merge pull request #2 from KazuhitoTa/vbgh)

@@ -10,15 +10,15 @@ using UnityEngine.Assertions;
 /// </summary>
 public static class EnumConverter
 {
-    private static Dictionary<string, UnitGroup> unitGroupTable = new ();
-    private static Dictionary<string, UnionLevel> unionLevelTable = new ();
-    private static Dictionary<string, StageID> stageIDTable = new ();
+    private static Dictionary<string, EnemyName> enemyNameTable = new ();
+    private static Dictionary<string, UnitName> unitNameTable = new ();
+    private static Dictionary<string, UnitType> unitTypeTable = new ();
 
     static EnumConverter()
     {
-        setTable<UnitGroup>(unitGroupTable);
-        setTable<UnionLevel>(unionLevelTable);
-        setTable<StageID>(stageIDTable);
+        setTable<EnemyName>(enemyNameTable);
+        setTable<UnitName>(unitNameTable);
+        setTable<UnitType>(unitTypeTable);
     }
 
     private static void setTable<TEnum>(Dictionary<string, TEnum> table)
@@ -38,28 +38,27 @@ public static class EnumConverter
         return table[str];
     }
 
-
     /// <summary>
-    /// 文字列を <see cref="UnitGroup"/> に変換する
+    /// 文字列を <see cref="EnemyName"/> に変換する
     /// </summary>
     /// <param name="str">文字列</param>
-    /// <typeparam name="UnitGroup"></typeparam>
-    /// <returns>対応する <see cref="UnitGroup"/></returns>
-    public static UnitGroup ConvertUnitGroup(string str) => convertEnum<UnitGroup>(str, unitGroupTable);
+    /// <typeparam name="EnemyName"></typeparam>
+    /// <returns>対応する <see cref="EnemyName"/></returns>
+    public static EnemyName ConvertEnemyName(string str) => convertEnum<EnemyName>(str, enemyNameTable);
+
+    /// <summary>
+    /// 文字列を <see cref="UnitName"/> に変換する
+    /// </summary>
+    /// <param name="str">文字列</param>
+    /// <typeparam name="UnitName"></typeparam>
+    /// <returns>対応する <see cref="UnitName"/></returns>
+    public static UnitName ConvertUnitName(string str) => convertEnum<UnitName>(str, unitNameTable);
     
     /// <summary>
-    /// 文字列を <see cref="UnionLevel"/> に変換する
+    /// 文字列を <see cref="UnitType"/> に変換する
     /// </summary>
     /// <param name="str">文字列</param>
-    /// <typeparam name="UnionLevel"></typeparam>
-    /// <returns>対応する <see cref="UnionLevel"/></returns>
-    public static UnionLevel ConvertUnionLevel(string str) => convertEnum<UnionLevel>(str, unionLevelTable);
-
-    /// <summary>
-    /// 文字列を <see cref="StageID"/> に変換する
-    /// </summary>
-    /// <param name="str">文字列</param>
-    /// <typeparam name="StageID"></typeparam>
-    /// <returns>対応する <see cref="StageID"/></returns>
-    public static StageID ConvertStageID(string str) => convertEnum<StageID>(str, stageIDTable);
+    /// <typeparam name="UnitType"></typeparam>
+    /// <returns>対応する <see cref="UnitType"/></returns>
+    public static UnitType ConvertUnitType(string str) => convertEnum<UnitType>(str, unitTypeTable);
 }

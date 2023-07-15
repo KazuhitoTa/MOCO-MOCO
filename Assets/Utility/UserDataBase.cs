@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+<<<<<<< HEAD:Assets/Utility/UserDataBase.cs
 [Serializable]
 public class StageRecord
 {
@@ -168,4 +169,15 @@ public class UserDataBase : DataBase<UserDataBase>
     public void SetHighScore(StageID id, int score) => wrap.rowList[stageIDToIndex[id]].HighScore = score;
     public int GetStars(StageID id) => wrap.rowList[stageIDToIndex[id]].Stars;
     public void SetStars(StageID id, int stars) => wrap.rowList[stageIDToIndex[id]].Stars = stars;
+=======
+/// <summary>
+/// 
+/// </summary>
+public sealed class UserDataBase : DataBase<UserDataBase>
+{
+    protected override string FileName => "user_data.json";
+    protected override string Path => Application.dataPath + "\\" + FileName;
+    protected override string Key => "";
+    protected override string IV => "";
+>>>>>>> parent of add5387 (Merge pull request #2 from KazuhitoTa/vbgh):Assets/Script/Utility/UserDataBase.cs
 }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/gomi.cs.meta
 guid: b731a7710db88e84f9691bdeaaaae2ca
+========
+guid: 2de1216e3ab21c345b7818d7268d8e04
+>>>>>>>> parent of add5387 (Merge pull request #2 from KazuhitoTa/vbgh):Assets/Utility/UserDataBase.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
