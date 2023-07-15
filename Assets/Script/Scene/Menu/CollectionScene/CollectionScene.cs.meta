@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Script/Unit/UnitGroup.cs.meta
-guid: d166d66879af15a479917cf122fc46c7
-========
 guid: 7bf0b7ecc17ca1c45b2046e22669ff67
->>>>>>>> main:Assets/Script/Scene/Menu/CollectionScene/CollectionScene.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
