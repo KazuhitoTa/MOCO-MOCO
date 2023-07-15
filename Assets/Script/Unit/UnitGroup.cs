@@ -7,5 +7,8 @@ using UnityEngine;
 public enum UnitGroup
 {
     Green,
+<<<<<<< HEAD
     Yellow,
+=======
+>>>>>>> parent of d5e03cc (gomi)
 }

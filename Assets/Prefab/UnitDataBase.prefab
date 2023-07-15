@@ -9,7 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3411251721740314388}
+<<<<<<< HEAD
   - component: {fileID: 3411251721740314391}
+=======
+>>>>>>> parent of d5e03cc (gomi)
   m_Layer: 0
   m_Name: UnitDataBase
   m_TagString: Untagged
@@ -32,6 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &3411251721740314391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,3 +49,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   db: []
+=======
+>>>>>>> parent of d5e03cc (gomi)
