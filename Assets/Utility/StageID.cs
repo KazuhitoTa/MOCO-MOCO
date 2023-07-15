@@ -1,10 +1,12 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public enum EnemyName
+public enum StageID
 {
-    
+    Stage1,
+    Stage2,
+    Stage3,
+    Stage4,
+    Stage5,
 }

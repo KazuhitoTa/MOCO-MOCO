@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public enum UnitName
+public enum UnitGroup
 {
     Green,
     Yellow,

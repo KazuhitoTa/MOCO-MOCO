@@ -9,11 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4843722591805333775}
-<<<<<<< HEAD
   - component: {fileID: 8728251031478973300}
-=======
-  - component: {fileID: 4843722591805333808}
->>>>>>> parent of add5387 (Merge pull request #2 from KazuhitoTa/vbgh)
   m_Layer: 0
   m_Name: UserDataBase
   m_TagString: Untagged
@@ -36,11 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!114 &8728251031478973300
-=======
---- !u!114 &4843722591805333808
->>>>>>> parent of add5387 (Merge pull request #2 from KazuhitoTa/vbgh)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,10 +41,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4843722591805333773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: e7c835d0a87adf54ebb6639ee51c542f, type: 3}
-=======
-  m_Script: {fileID: 11500000, guid: 2de1216e3ab21c345b7818d7268d8e04, type: 3}
->>>>>>> parent of add5387 (Merge pull request #2 from KazuhitoTa/vbgh)
   m_Name: 
   m_EditorClassIdentifier: 
